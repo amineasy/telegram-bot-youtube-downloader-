@@ -1,0 +1,4 @@
+pyTelegramBotAPI
+sqlalchemy
+yt-dlp
+python-decouple
