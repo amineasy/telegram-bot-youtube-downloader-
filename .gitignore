@@ -1,0 +1,7 @@
+.env
+databot.db
+/cookies
+/venv
+venv/
+__pycache__/
+*.pyc!/.gitignore
