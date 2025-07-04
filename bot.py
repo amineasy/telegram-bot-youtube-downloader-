@@ -19,7 +19,7 @@ init_db()
 
 bot = telebot.TeleBot(token)
 
-yt_service = YouTubeService()
+yt_service = YouTubeService(cookie_path='cookies/cookies.txt')
 
 user_downloads = {}
 
@@ -41,7 +41,11 @@ def handle_link(message):
         link.startswith("https://www.youtube.com") or
         link.startswith("http://www.youtube.com") or
         link.startswith("https://youtu.be") or
+        link.startswith("https://youtube.com") or
+        link.startswith("http://youtube.com") or
+        link.startswith("https://youtube") or
         link.startswith("http://youtu.be")
+
     ):
         bot.send_message(user_id, "❌ لطفا فقط لینک معتبر یوتیوب ارسال کن.")
         return
